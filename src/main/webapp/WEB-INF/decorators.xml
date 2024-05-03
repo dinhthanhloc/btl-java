@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<decorators defaultdir="/decorators">
+
+	
+    <decorator name="trang-chu" page="sinhvien.jsp">
+       <pattern>/trang-chu</pattern>
+    </decorator>
+    
+    <decorator name="home" page="giangvien.jsp">
+       <pattern>/home</pattern>
+    </decorator>
+
+</decorators>
