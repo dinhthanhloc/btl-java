@@ -2,15 +2,14 @@ package dinhthanhloc.dao.imp;
 
 import java.util.List;
 
-import org.apache.commons.lang3.StringUtils;
-
 import dinhthanhloc.dao.IDeTai;
 import dinhthanhloc.mapper.DeTaiMapper;
 import dinhthanhloc.model.DetaiEntity;
-import dinhthanhloc.paging.Pageble;
 
 public class DeTaiDAO extends AbstractDAO<DetaiEntity> implements IDeTai {
-
+	public static DeTaiDAO getInstance() {
+		return new DeTaiDAO();
+	}
 	@Override
 	public DetaiEntity findOne(Long MaDeTai) {
 		String sql = "SELECT * FROM detai WHERE id = ?";
@@ -46,15 +45,9 @@ public class DeTaiDAO extends AbstractDAO<DetaiEntity> implements IDeTai {
 	}
 
 	@Override
-	public List<DetaiEntity> findAll(Pageble pageble) {
-		StringBuilder sql = new StringBuilder("SELECT * FROM detai");
-		if (pageble.getSorter() != null && StringUtils.isNotBlank(pageble.getSorter().getSortName()) && StringUtils.isNotBlank(pageble.getSorter().getSortBy())) {
-			sql.append(" ORDER BY "+pageble.getSorter().getSortName()+" "+pageble.getSorter().getSortBy()+"");
-		}
-		if (pageble.getOffset() != null && pageble.getLimit() != null) {
-			sql.append(" LIMIT "+pageble.getOffset()+", "+pageble.getLimit()+"");
-		}
-		return query(sql.toString(), new DeTaiMapper());
+	public List<DetaiEntity> findAll() {
+		String sql = "SELECT * FROM detai";
+		return query(sql, new DeTaiMapper());
 	}
 
 	@Override

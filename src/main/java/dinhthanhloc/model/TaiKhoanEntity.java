@@ -12,6 +12,10 @@ public class TaiKhoanEntity {
 		return MaTaiKhoan;
 	}
 
+	public void setMaTaiKhoan(int maTaiKhoan) {
+		MaTaiKhoan = maTaiKhoan;
+	}
+
 	public String getUsername() {
 		return Username;
 	}
@@ -51,4 +55,25 @@ public class TaiKhoanEntity {
 	public void setMaLoaiTaiKhoan(int maLoaiTaiKhoan) {
 		MaLoaiTaiKhoan = maLoaiTaiKhoan;
 	}
+
+	@Override
+	public String toString() {
+		return "TaiKhoanEntity [MaTaiKhoan=" + MaTaiKhoan + ", Username=" + Username + ", Password=" + Password
+				+ ", Email=" + Email + ", HoTen=" + HoTen + ", MaLoaiTaiKhoan=" + MaLoaiTaiKhoan + "]";
+	}
+
+	public TaiKhoanEntity(String username, String password, String email, String hoTen, int maLoaiTaiKhoan) {
+		super();
+		Username = username;
+		Password = password;
+		Email = email;
+		HoTen = hoTen;
+		MaLoaiTaiKhoan = maLoaiTaiKhoan;
+	}
+
+	public TaiKhoanEntity() {
+		super();
+	}
+	
+	
 }

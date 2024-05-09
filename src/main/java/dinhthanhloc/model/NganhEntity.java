@@ -29,4 +29,9 @@ public class NganhEntity {
 		MaKhoa = maKhoa;
 	}
 
+	@Override
+	public String toString() {
+		return "NganhEntity [MaNganh=" + MaNganh + ", TenNganh=" + TenNganh + ", MaKhoa=" + MaKhoa + "]";
+	}
+	
 }

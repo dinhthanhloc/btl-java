@@ -22,7 +22,7 @@ public class NhomDAO extends AbstractDAO<NhomEntity> implements INhom{
 
 	@Override
 	public Long save(NhomEntity newNhom) {
-		StringBuilder sql = new StringBuilder("INSERT INTO detai (TenNhom,ThanhVien)");
+		StringBuilder sql = new StringBuilder("INSERT INTO nhom (TenNhom,ThanhVien)");
 		sql.append(" VALUES(?, ?)");
 		return insert(sql.toString(), newNhom.getTenNhom(), newNhom.getThanhVien());
 	}

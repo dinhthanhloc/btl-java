@@ -132,7 +132,7 @@ public class AbstractDAO<T> implements GenericDAO<T> {
 			resultSet = statement.getGeneratedKeys();
 			if (resultSet.next()) {
 				id = resultSet.getLong(1);
-			}
+			}	
 			connection.commit();
 			return id;
 		} catch (SQLException e) {

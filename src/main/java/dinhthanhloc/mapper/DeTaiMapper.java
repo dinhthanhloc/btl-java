@@ -10,6 +10,7 @@ public class DeTaiMapper implements RowMapper<DetaiEntity>{
 	public DetaiEntity mapRow(ResultSet resultSet) {
 		try {
 			DetaiEntity detai = new DetaiEntity();
+			detai.setMaDeTai(resultSet.getInt("MaDeTai"));
 			detai.setTenDeTai(resultSet.getString("TenDeTai"));
 			detai.setMaGiangVien(resultSet.getString("MaGiangVien"));
 			detai.setMaNhom(resultSet.getInt("MaNhom"));

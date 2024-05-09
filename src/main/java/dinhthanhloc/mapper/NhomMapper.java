@@ -10,6 +10,7 @@ public class NhomMapper implements RowMapper<NhomEntity> {
 	public NhomEntity mapRow(ResultSet resultSet) {
 		try {
 			NhomEntity nhom = new NhomEntity();
+			nhom.setMaNhom(resultSet.getInt("MaNhom"));
 			nhom.setTenNhom(resultSet.getString("TenNhom"));
 			nhom.setThanhVien(resultSet.getString("ThanhVien"));
 			return nhom;

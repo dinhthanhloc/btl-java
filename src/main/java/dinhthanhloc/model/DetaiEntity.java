@@ -1,7 +1,7 @@
  package dinhthanhloc.model;
 
 
-public class DetaiEntity {
+public class DetaiEntity extends AbstractEntity<DetaiEntity>{
 
 	private int MaDeTai;
 	private String TenDeTai;
@@ -13,6 +13,10 @@ public class DetaiEntity {
 
 	public long getMaDeTai() {
 		return MaDeTai;
+	}
+	
+	public void setMaDeTai(int maDeTai) {
+		MaDeTai = maDeTai;
 	}
 
 	public String getTenDeTai() {

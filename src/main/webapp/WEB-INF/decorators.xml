@@ -4,11 +4,13 @@
 
 	
     <decorator name="trang-chu" page="sinhvien.jsp">
-       <pattern>/trang-chu</pattern>
+       <pattern>/*</pattern>
     </decorator>
     
     <decorator name="home" page="giangvien.jsp">
-       <pattern>/home</pattern>
+       <pattern>/quan-tri*</pattern>
     </decorator>
-
+	<decorator name="login" page="login.jsp">
+       <pattern>/dang-nhap</pattern>
+    </decorator>
 </decorators>

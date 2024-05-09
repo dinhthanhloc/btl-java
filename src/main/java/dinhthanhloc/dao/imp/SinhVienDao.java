@@ -2,14 +2,14 @@ package dinhthanhloc.dao.imp;
 
 import java.util.List;
 
-import org.apache.commons.lang3.StringUtils;
-
 import dinhthanhloc.dao.ISinhVien;
 import dinhthanhloc.mapper.SinhVienMapper;
 import dinhthanhloc.model.SinhVienEntity;
-import dinhthanhloc.paging.Pageble;
 
 public class SinhVienDao extends AbstractDAO<SinhVienEntity> implements ISinhVien {
+	public static SinhVienDao getInstance() {
+		return new SinhVienDao();
+	}
 	@Override
 	public SinhVienEntity findOne(Long MaSinhVien) {
 		String sql = "SELECT * FROM sinhvien WHERE MaSinhVien = ?";
@@ -19,10 +19,10 @@ public class SinhVienDao extends AbstractDAO<SinhVienEntity> implements ISinhVie
 
 	@Override
 	public Long save(SinhVienEntity newSinhVien) {
-		StringBuilder sql = new StringBuilder("INSERT INTO detai (MaSinhVien, HoTen, Lop,");
+		StringBuilder sql = new StringBuilder("INSERT INTO sinhvien (MaSinhVien, HoTen, Lop,");
 		sql.append(" NienKhoa, MaNganh, MaTaiKhoan)");
 		sql.append(" VALUES(?,?,?,?,?,?)");
-		return insert(sql.toString(), newSinhVien.getMaTaiKhoan(), newSinhVien.getHoTen(), newSinhVien.getLop(),
+		return insert(sql.toString(), newSinhVien.getMaSinhVien(), newSinhVien.getHoTen(), newSinhVien.getLop(),
 				newSinhVien.getNienKhoa(), newSinhVien.getMaNganh(), newSinhVien.getMaTaiKhoan());
 	}
 
@@ -43,15 +43,8 @@ public class SinhVienDao extends AbstractDAO<SinhVienEntity> implements ISinhVie
 	}
 
 	@Override
-	public List<SinhVienEntity> findAll(Pageble pageble) {
+	public List<SinhVienEntity> findAll() {
 		StringBuilder sql = new StringBuilder("SELECT * FROM sinhvien");
-		if (pageble.getSorter() != null && StringUtils.isNotBlank(pageble.getSorter().getSortName())
-				&& StringUtils.isNotBlank(pageble.getSorter().getSortBy())) {
-			sql.append(" ORDER BY " + pageble.getSorter().getSortName() + " " + pageble.getSorter().getSortBy() + "");
-		}
-		if (pageble.getOffset() != null && pageble.getLimit() != null) {
-			sql.append(" LIMIT " + pageble.getOffset() + ", " + pageble.getLimit() + "");
-		}
 		return query(sql.toString(), new SinhVienMapper());
 	}
 

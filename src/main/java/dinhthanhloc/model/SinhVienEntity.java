@@ -56,4 +56,17 @@ public class SinhVienEntity {
 		MaTaiKhoan = maTaiKhoan;
 	}
 
+	public SinhVienEntity(String maSinhVien, String hoTen, String lop, String nienKhoa, int maNganh, int maTaiKhoan) {
+		MaSinhVien = maSinhVien;
+		HoTen = hoTen;
+		Lop = lop;
+		NienKhoa = nienKhoa;
+		MaNganh = maNganh;
+		MaTaiKhoan = maTaiKhoan;
+	}
+
+	public SinhVienEntity() {
+		super();
+	}
+	
 }
