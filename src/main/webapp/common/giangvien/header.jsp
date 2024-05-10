@@ -12,15 +12,15 @@
                     <li>
                         <a href="#">Quản lí đề tài</a>
                         <ul class="menu-sublist">
-                            <li><a href="">Danh sách</a></li>
-                            <li><a href="">Chấm điểm</a></li>
+                            <li><a href="<c:url value='/quan-tri/listDeTai' />">Danh sách</a></li>
+                            <li><a href="<c:url value='/quan-tri/chamDeTai' />">Chấm điểm</a></li>
                             
                         </ul>
                     </li>
                     <li>
                         <a href="#">Quan lí nhóm</a>
                         <ul class="menu-sublist">
-                            <li><a href="">Danh sách nhóm</a></li>
+                            <li><a href="<c:url value='/quan-tri/add' />">Danh sách nhóm</a></li>
                             <li><a href="">quản lí báo cáo</a></li>
                         </ul>
                     </li>

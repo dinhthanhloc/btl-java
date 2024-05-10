@@ -11,11 +11,18 @@ import dinhthanhloc.model.DetaiEntity;
 @Controller(value = "detaiControllerOfGiangVien")
 public class DeTaiController {
 
-	@RequestMapping(value = "/quan-tri/detai/list", method = RequestMethod.GET)
-	public ModelAndView showList(@ModelAttribute("detai") DetaiEntity detai) {
-		ModelAndView mav = new ModelAndView("admin/new/list");
-		detai.setListResult(DeTaiDAO.getInstance().findAll());
-		mav.addObject("model", detai);
+	@RequestMapping(value = "/quan-tri/listDeTai", method = RequestMethod.GET)
+	public ModelAndView listDeTai(@ModelAttribute("model") DetaiEntity model) {
+		ModelAndView mav = new ModelAndView("giangvien/detai/list");
+		model.setListResult(DeTaiDAO.getInstance().findAll());
+		mav.addObject("model", model);
+		return mav;
+	}
+	@RequestMapping(value = "/quan-tri/chamDeTai", method = RequestMethod.GET)
+	public ModelAndView chamDiem(@ModelAttribute("model") DetaiEntity model) {
+		ModelAndView mav = new ModelAndView("giangvien/detai/chamdiem");
+		model.setListResult(DeTaiDAO.getInstance().findByTrangThai(3));
+		mav.addObject("model", model);
 		return mav;
 	}
 }

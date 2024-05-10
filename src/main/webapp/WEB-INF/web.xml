@@ -37,6 +37,11 @@
 			<param-value>/WEB-INF/context/dispatcher-servlet.xml</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
+		<multipart-config>
+			<max-file-size>100000000</max-file-size> <!-- Kích thước tối đa của tập tin -->
+			<max-request-size>100000000</max-request-size> <!-- Kích thước tối đa của yêu cầu -->
+			<file-size-threshold>0</file-size-threshold> <!-- Ngưỡng kích thước tập tin -->
+		</multipart-config>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>dispatcher</servlet-name>

@@ -17,7 +17,7 @@ import dinhthanhloc.model.TaiKhoanEntity;
 public class ReadFileCsv {
 
 	public static void main(String[] args) {
-		String csvFile = "C:\\Users\\84941\\eclipse-workspace\\btl-java\\data.csv";
+		String csvFile = "D:\\java\\btl-java\\data.csv";
 		File file = new File(csvFile);
 
 		String line = "";

@@ -8,14 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import dinhthanhloc.dao.imp.GiangVienDAO;
-import dinhthanhloc.dao.imp.SinhVienDao;
-import dinhthanhloc.dao.imp.TaiKhoanDAO;
-import dinhthanhloc.hash.hashcode;
-import dinhthanhloc.model.GiangVienEntity;
 import dinhthanhloc.model.NhomEntity;
 import dinhthanhloc.model.SinhVienEntity;
-import dinhthanhloc.model.TaiKhoanEntity;
 
 @Controller(value = "homeControllerOfSinhVien")
 public class HomeController {

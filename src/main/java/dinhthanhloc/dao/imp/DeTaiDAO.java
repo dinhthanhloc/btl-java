@@ -12,7 +12,7 @@ public class DeTaiDAO extends AbstractDAO<DetaiEntity> implements IDeTai {
 	}
 	@Override
 	public DetaiEntity findOne(Long MaDeTai) {
-		String sql = "SELECT * FROM detai WHERE id = ?";
+		String sql = "SELECT * FROM detai WHERE MaDeTai = ?";
 		List<DetaiEntity> detai = query(sql, new DeTaiMapper(), MaDeTai);
 		return detai.isEmpty() ? null : detai.get(0);
 	}
@@ -54,6 +54,12 @@ public class DeTaiDAO extends AbstractDAO<DetaiEntity> implements IDeTai {
 	public int getTotalItem() {
 		String sql = "SELECT count(*) FROM detai";
 		return count(sql);
+	}
+	@Override
+	public List<DetaiEntity> findByTrangThai(int MaTrangThai) {
+		String sql = "SELECT * FROM detai WHERE MaTrangThai = ?";
+		return query(sql, new DeTaiMapper(), MaTrangThai);
+		
 	}
 
 }

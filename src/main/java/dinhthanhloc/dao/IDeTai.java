@@ -10,5 +10,6 @@ public interface IDeTai extends GenericDAO<DetaiEntity>{
 	void update(DetaiEntity updateDeTai);
 	void delete(long id);
 	List<DetaiEntity> findAll();
+	List<DetaiEntity> findByTrangThai(int maTrangthai);
 	int getTotalItem();
 }

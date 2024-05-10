@@ -8,7 +8,7 @@
 		<h2 style="text-align: center">Upload Sinh Viên</h2>
 		<br />
 		<br />
-		<form method="post" action="/quan-tri/addData" enctype="multipart/form-data">
+		<form method="post" action="<c:url value='/quan-tri/addData' />" enctype="multipart/form-data">
 			<div class="container">
 				<div class="form-group" style="text-align: center">
 					<label for="csvfile" style="text-align: center">Chọn File
