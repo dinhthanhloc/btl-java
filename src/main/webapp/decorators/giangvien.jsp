@@ -27,6 +27,6 @@
 	<dec:body />
 
 	<%@ include file="/common/giangvien/footer.jsp"%>
-	<script src="<c:url value='/template/giangvien/header.js' />"></script>
+	<%-- <script src="<c:url value='/template/giangvien/header.js' />"></script> --%>
 </body>
 </html>
