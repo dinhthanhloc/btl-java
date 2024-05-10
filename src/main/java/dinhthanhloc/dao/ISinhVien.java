@@ -11,4 +11,5 @@ public interface ISinhVien extends GenericDAO<SinhVienEntity>{
 	void delete(long id);
 	List<SinhVienEntity> findAll();
 	int getTotalItem();
+	SinhVienEntity findOneByMaTK(Long MaTaiKhoan);
 }

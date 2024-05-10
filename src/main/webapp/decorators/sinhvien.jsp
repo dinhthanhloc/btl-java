@@ -16,7 +16,7 @@
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"></script>
 <script src="https://kit.fontawesome.com/a610a0c4b9.js"></script>
-
+<link href="<c:url value='/template/giangvien/header.css' />" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 	<!-- Navigation -->
@@ -26,7 +26,7 @@
 
 	<!-- Footer -->
 	<%@ include file="/common/sinhvien/footer.jsp"%>
-
+	<script src="<c:url value='/template/giangvien/header.js' />"></script>
 
 </body>
 </html>

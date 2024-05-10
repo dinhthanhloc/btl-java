@@ -68,5 +68,11 @@ public class SinhVienEntity {
 	public SinhVienEntity() {
 		super();
 	}
+
+	@Override
+	public String toString() {
+		return "SinhVienEntity [MaSinhVien=" + MaSinhVien + ", HoTen=" + HoTen + ", Lop=" + Lop + ", NienKhoa="
+				+ NienKhoa + ", MaNganh=" + MaNganh + ", MaTaiKhoan=" + MaTaiKhoan + "]";
+	}
 	
 }

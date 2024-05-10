@@ -16,7 +16,7 @@
 				</thead>
 				
 			</table>
-			<a href="<c:url value='/detai/list'/>">link</a>
+			
 		</div>
 	</div>
 

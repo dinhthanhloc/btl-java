@@ -4,34 +4,36 @@
 
 
 <body>
-    <div class="title-login">
-        <div class="login-logo">
-            <img src="/web/accset/img/tải xuống.png" alt="#">
-        </div>
-        <h1>Trường Đại Học Giao Thông Vận Tải</h1>
-    </div>
+	<div class="title-login">
+		<div class="login-logo">
+			<img
+				src="https://reviewedu.net/wp-content/uploads/2021/11/diem-chuan-dh-giao-thong-van-tai.png"
+				alt="#">
+		</div>
+		<h1>Trường Đại Học Giao Thông Vận Tải</h1>
+	</div>
 	<div class="container form-signin mt-3 ">
-        <span>${message}</span>
-        <form:form method="POST" 
-          action="/btl-spring/save-login" modelAttribute="taikhoan">
-             <table>
-                <tr>
-                    <td><form:label path="Username">Name</form:label></td>
-                    <td><form:input path="Username"/></td>
-                </tr>
-                <tr>
-                    <td><form:label path="Password">Id</form:label></td>
-                    <td><form:input path="Password"/></td>
-                </tr>
-                <tr>
-                    <td><form:radiobutton path="MaLoaiTaiKhoan" value="1"></form:radiobutton>Sinh Viên</td>
-                    <td><form:radiobutton path="MaLoaiTaiKhoan" value="2"></form:radiobutton>Giảng Viên</td>
-                </tr>
-                <tr>
-                    <td><input type="submit" value="Submit"/></td>
-                </tr>
-            </table>
-        </form:form>
+		<span>${message}</span>
+		<form:form method="POST" action="/btl-spring/save-login"
+			modelAttribute="taikhoan">
+			<div class="form-floating">
+				<form:label for="floatingInput"   path="Username">Name</form:label>
+				<form:input  class="form-control" placeholder="12456789" path="Username" />
+			</div>
+			<div>
+				<form:label path="Password">Id</form:label>
+				<form:input path="Password" />
+			</div>
+			<div>
+				<form:radiobutton path="MaLoaiTaiKhoan" value="1"></form:radiobutton>
+				Sinh Viên
+				<form:radiobutton path="MaLoaiTaiKhoan" value="2"></form:radiobutton>
+				Giảng Viên
+			</div>
+			<div>
+				<input type="submit" value="Submit" />
+			</div>
+		</form:form>
 	</div>
 
 </body>

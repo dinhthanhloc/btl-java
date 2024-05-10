@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 50px;
+    background-color: rgb(50, 163, 194);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+header .menu{
+    background-color: rgb(50, 163, 194);
+    position: absolute;
+
+}
+header .menu:hover{
+    box-shadow: 0 0 2px;
+}
+
+.header-menu-nav {
+    
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0; 
+    width: 200px; 
+    background-color: rgb(235, 217, 217);
+    box-shadow: 0 0 10px;
+    padding: 10px 0; 
+    transition: margin-left 0.5s; /* Thêm hiệu ứng transition */
+    margin-left: 0; 
+    min-height: 500px;
+    
+} 
+
+.header-menu-nav.active {
+    display: block;
+    /* Ensure the menu is visible when active class is present */
+}
+
+.header-menu-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header-menu-nav li {
+    text-align: center; 
+    margin: 10px; 
+    padding: 5px;
+    position: relative;
+    display: block;
+}
+.header-menu-nav li:hover{
+    background-color:rgb(83, 164, 164);
+    display: block;
+}
+.header-menu-nav a{
+    text-decoration: none;
+    color: black;
+}
+.menu-sublist {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: -10px;
+    box-shadow: 0 0 10px rgb(231, 222, 222);
+    background-color: #ead2d2e5;
+    width: 200px; 
+}
+
+
+
+
+
+/* Hiển thị menu-sublist khi thẻ li được click */
+.show-sublist .menu-sublist {
+    display: block;
+
+}
+.show-sublist + li{
+    margin-top: 100px;
+}
+
+.header-menu-mav a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.search-container form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-container input[type="text"] {
+    padding: 5px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+.search-container button {
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.account-menu {
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    cursor: pointer;
+    width: 100px;
+   
+}
+.account-menu:hover{
+    background-color: #333;
+}
+.account-menu a{
+    text-decoration: none;
+    color: #fff;
+}
+.account-submenu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 10px;
+    
+}
+.account-submenu a:hover{
+    background-color: #333;
+    color: #fff;
+}
+.account-submenu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.account-menu:hover .account-submenu {
+    display: block;
+    margin-top: 5px;
+   left: 0;
+   width: 100px;
+    
+}

@@ -6,7 +6,7 @@
     <decorator name="trang-chu" page="sinhvien.jsp">
        <pattern>/*</pattern>
     </decorator>
-    
+     
     <decorator name="home" page="giangvien.jsp">
        <pattern>/quan-tri*</pattern>
     </decorator>

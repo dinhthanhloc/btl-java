@@ -17,4 +17,4 @@
 
     <context:component-scan base-package="dinhthanhloc.controller, dinhthanhloc.entity, dinhthanhloc.repository" />
 
-</beans>
+</beans> 

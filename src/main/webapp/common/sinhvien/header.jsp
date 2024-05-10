@@ -1,36 +1,55 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-	<div class="container-fluid">
-		<a class="navbar-brand" href="#">Navbar</a>
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-			data-bs-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent" aria-expanded="false"
-			aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-				<li class="nav-item"><a class="nav-link active"
-					aria-current="page" href="#">Home</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" role="button"
-					data-bs-toggle="dropdown" aria-expanded="false"> Dropdown </a>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#">Action</a></li>
-						<li><a class="dropdown-item" href="#">Another action</a></li>
-						<li><hr class="dropdown-divider"></li>
-						<li><a class="dropdown-item" href="#">Something else here</a></li>
-					</ul></li>
-				<li class="nav-item"><a class="nav-link disabled"
-					aria-disabled="true">Disabled</a></li>
-			</ul>
-			<form class="d-flex" role="search">
-				<input class="form-control me-2" type="search" placeholder="Search"
-					aria-label="Search">
-				<button class="btn btn-outline-success" type="submit">Search</button>
-			</form>
-		</div>
-	</div>
-</nav>
+ <header>
+        <div class="header-logo">
+           <img src="" alt="">
+        </div>
+        <div onclick="toggleNavigation()" class="menu"><i class="fa fa-navicon" style="font-size:24px"></i></div>
+        <nav class="header-menu-nav">
+            <ul>
+                <li><a href="<c:url value='/quan-tri/home' />">Trang chủ</a></li>
+                <li>
+                    <a href="#">Quản lí đề tài</a>
+                    <ul class="menu-sublist">
+                        <li><a href="">Danh sách</a></li>
+                        <li><a href="">Chấm điểm</a></li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Quan lí nhóm</a>
+                    <ul class="menu-sublist">
+                        <li><a href="">Danh sách nhóm</a></li>
+                        <li><a href="">quản lí báo cáo</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Trợ giúp</a>
+                    <ul class="menu-sublist">
+                        <li><a href="">Đăng nhập</a></li>
+                        <li><a href="">Quên Mật khẩu</a></li>
+                        <li><a href="">Liên hệ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        
+           
+            <div class="search-container">
+                <form action="/search" method="get">
+                    <input type="text" placeholder="Search..." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <div class="account-menu">
+                <a href="#"><i class="fa fa-user"> </i> Account</a>
+                <div class="account-submenu">
+                    <a href="#">Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="<c:url value='/logout' />">Logout</a>
+                </div>
+            </div>
+            <div onclick="toggleNavigation()" class="menu"><i class="fa fa-navicon" style="font-size:24px"></i></div>
+         
+        
+    </header>

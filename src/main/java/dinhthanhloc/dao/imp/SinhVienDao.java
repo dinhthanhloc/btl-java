@@ -53,4 +53,10 @@ public class SinhVienDao extends AbstractDAO<SinhVienEntity> implements ISinhVie
 		String sql = "SELECT count(*) FROM sinhvien";
 		return count(sql);
 	}
+	@Override
+	public SinhVienEntity findOneByMaTK(Long MaTaiKhoan) {
+		String sql = "SELECT * FROM sinhvien WHERE MaTaiKhoan = ?";
+		List<SinhVienEntity> sinhvien = query(sql, new SinhVienMapper(), MaTaiKhoan);
+		return sinhvien.isEmpty() ? null : sinhvien.get(0);
+	}
 }

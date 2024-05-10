@@ -1,17 +1,24 @@
 package dinhthanhloc.controller.sinhvien;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+
+import dinhthanhloc.model.SinhVienEntity;
 
 @Controller(value = "homeControllerOfSinhVien")
 public class HomeController {
 
 	
 	@RequestMapping(value="/trang-chu", method = RequestMethod.GET)
-	public ModelAndView homePage() {
-		
+	public ModelAndView homePage(HttpSession session) {
+		SinhVienEntity sv = (SinhVienEntity)session.getAttribute("USERMODEL");
+		if(sv != null) {
+			System.out.println(sv.toString());
+		}
 		ModelAndView mav = new ModelAndView("sinhvien/home");
 		return mav;
 	}
