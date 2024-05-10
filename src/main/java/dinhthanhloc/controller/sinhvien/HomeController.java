@@ -10,6 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import dinhthanhloc.model.NhomEntity;
 import dinhthanhloc.model.SinhVienEntity;
+import dinhthanhloc.model.TaiKhoanEntity;
 
 @Controller(value = "homeControllerOfSinhVien")
 public class HomeController {
@@ -24,11 +25,18 @@ public class HomeController {
 		ModelAndView mav = new ModelAndView("sinhvien/home");
 		return mav;
 	}
-	@RequestMapping(value = "/add-nhom", method = RequestMethod.POST)
-	public ModelAndView saveLogin(@ModelAttribute("nhom") NhomEntity nhom) {
+	@RequestMapping(value = "/them-nhom", method = RequestMethod.GET)
+	public ModelAndView themNhom() {
 		
+			ModelAndView mav = new ModelAndView("sinhvien/createNhom", "nhom", new NhomEntity());
+			
+			return mav;
+	
+	}
+	@RequestMapping(value = "/save-nhom", method = RequestMethod.POST)
+	public ModelAndView saveNhom(@ModelAttribute("nhom") NhomEntity nhom) {
 		
-			ModelAndView mav = new ModelAndView("redirect:/dang-nhap");
+			ModelAndView mav = new ModelAndView("sinhvien/createNhom", "nhom", new NhomEntity());
 			
 			return mav;
 	

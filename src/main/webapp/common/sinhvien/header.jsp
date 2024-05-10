@@ -10,19 +10,12 @@
                 <ul>
                     <li><a href="#">Trang chủ</a></li>
                     <li>
-                        <a href="#">Quản lí đề tài</a>
-                        <ul class="menu-sublist">
-                            <li><a href="">Danh sách</a></li>
-                            <li><a href="">Chấm điểm</a></li>
-                            
-                        </ul>
+                        <a href="<c:url value='/them-detai' />">Đề Tài</a>
+                        
                     </li>
                     <li>
-                        <a href="#">Quan lí nhóm</a>
-                        <ul class="menu-sublist">
-                            <li><a href="">Danh sách nhóm</a></li>
-                            <li><a href="">quản lí báo cáo</a></li>
-                        </ul>
+                        <a href="<c:url value='/them-nhom' />">Nhóm</a>
+                        
                     </li>
                     <li>
                         <a href="#">Trợ giúp</a>
