@@ -27,4 +27,10 @@ public class NhomEntity {
 	public String toString() {
 		return "NhomEntity [MaNhom=" + MaNhom + ", TenNhom=" + TenNhom + ", ThanhVien=" + ThanhVien + "]";
 	}
+	public NhomEntity(String tenNhom, String thanhVien) {
+		super();
+		TenNhom = tenNhom;
+		ThanhVien = thanhVien;
+	}
+	
 }

@@ -13,10 +13,9 @@
 			</div>
 			<form:form method="POST" action="/save-nhom" modelAttribute="nhom">
 				<div class="group">
-					<form:label for="group-name" path="TenNhom">Tên Nhóm:</form:label>
-					<form:input id="group-name" placeholder="Nhập tên nhóm"
-						path="TenNhom"/>
-						<hr>
+					<label for="group-name" >Tên Nhóm:</label> <input
+						id="TenNhom" name="TenNhom" placeholder="Nhập tên nhóm">
+					<hr>
 				</div>
 				<div id="members-container">
 					<div class="thanhvien">

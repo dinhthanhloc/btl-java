@@ -12,32 +12,22 @@
 					</h1>
 			</div>
 			<div class="dangki-form">
-				<form action="">
+				<form:form method="POST" action="/btl-spring/save-login" modelAttribute="deai">
 					<div class="form-item">
-						<label for="detai">Tên đề tài: </label> <input type="text"
-							id="detai" name="detai" required>
+						<form:label for="detai" path="TenDeTai">Tên đề tài: </form:label> <form:input type="text"
+							id="detai" path="TenDeTai" required/>
 					</div>
 
 					<div class="form-item">
-						<label for="giangvien">Giảng viên hướng dẫn </label> <input
-							type="text" name="giangvien" id="giangvien"
-							placeholder="Nhập tên gv" required>
-					</div>
-					<div class="form-item">
-						<label for="khoa">Khoa xét duyệt đề tài:</label> <select
-							name="khoa" id="khoa">
-							<option value="">Chọn</option>
-							<option value="">CNTT</option>
-							<option value="">Cơ Khí</option>
-							<option value="">Kinh Tế</option>
-							<option value="">Ngôn Ngữ</option>
-						</select>
+						<form:label for="giangvien" path="TenDeTai">Giảng viên hướng dẫn </form:label> <form:input
+							type="text" id="giangvien" path="TenDeTai"
+							placeholder="Nhập tên gv" required/>
 					</div>
 
 					<div class="form-item">
-						<label for="giangvien"> Tên Nhóm </label> <input type="text"
-							name="giangvien" id="giangvien" placeholder="Nhập tên nhóm"
-							required>
+						<form:label for="giangvien" path="TenDeTai"> Tên Nhóm </form:label> <form:input type="text"
+							path="TenDeTai" id="giangvien" placeholder="Nhập tên nhóm"
+							required/>
 					</div>
 
 					<div class="form-button">
@@ -49,7 +39,7 @@
 						</button>
 
 					</div>
-				</form>
+				</form:form>
 			</div>
 		</div>
 	</div>
