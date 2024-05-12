@@ -17,7 +17,7 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"></script>
 <script src="https://kit.fontawesome.com/a610a0c4b9.js"></script>
 <link href="<c:url value='/template/login/style.css' />" rel="stylesheet" type="text/css"/>
-
+<link href="<c:url value='/template/login/login.css' />" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>

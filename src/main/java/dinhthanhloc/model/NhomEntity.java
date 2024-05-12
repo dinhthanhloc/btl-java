@@ -32,5 +32,8 @@ public class NhomEntity {
 		TenNhom = tenNhom;
 		ThanhVien = thanhVien;
 	}
+	public NhomEntity() {
+		super();
+	}
 	
 }

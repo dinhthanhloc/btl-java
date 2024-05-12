@@ -54,4 +54,10 @@ public class GiangVienDAO extends AbstractDAO<GiangVienEntity> implements IGiang
 		List<GiangVienEntity> giangvien = query(sql, new GiangVienMapper(), MaTaiKhoan);
 		return giangvien.isEmpty() ? null : giangvien.get(0);
 	}
+	@Override
+	public GiangVienEntity findOneByTen(String TenGiangVien) {
+		String sql = "SELECT * FROM giangvien WHERE TenGiangVien = ?";
+		List<GiangVienEntity> giangvien = query(sql, new GiangVienMapper(), TenGiangVien);
+		return giangvien.isEmpty() ? null : giangvien.get(0);
+	}
 }

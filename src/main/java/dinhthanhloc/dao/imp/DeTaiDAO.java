@@ -20,10 +20,10 @@ public class DeTaiDAO extends AbstractDAO<DetaiEntity> implements IDeTai {
 	@Override
 	public Long save(DetaiEntity newDeTai) {
 		StringBuilder sql = new StringBuilder("INSERT INTO detai (TenDeTai,");
-		sql.append(" MaGiangVien, MaNhom, MaNganh, MaTrangThai, KetQua)");
-		sql.append(" VALUES(?, ?, ?, ?, ?, ?)");
+		sql.append(" MaGiangVien, MaNhom, MaNganh, MaTrangThai)");
+		sql.append(" VALUES(?, ?, ?, ?, ?)");
 		return insert(sql.toString(), newDeTai.getTenDeTai(), newDeTai.getMaGiangVien(), newDeTai.getMaNhom(),
-				newDeTai.getMaNganh(), newDeTai.getMaTrangThai(), newDeTai.getKetQua());
+				newDeTai.getMaNganh(), newDeTai.getMaTrangThai());
 	}
 
 	@Override

@@ -11,27 +11,28 @@
 			<div class="header">
 				<h3>Đăng Ký Nhóm</h3>
 			</div>
-			<form:form method="POST" action="/save-nhom" modelAttribute="nhom">
+			<form action="/btl-spring/save-nhom" method="GET">
 				<div class="group">
-					<label for="group-name" >Tên Nhóm:</label> <input
-						id="TenNhom" name="TenNhom" placeholder="Nhập tên nhóm">
+					<label for="tenDeTai">Tên Nhóm:</label> <input type="text"
+						id="tenNhom" name="tenNhom" placeholder="Nhập tên Nhóm" required>
 					<hr>
 				</div>
 				<div id="members-container">
 					<div class="thanhvien">
-						<label for="id">Mã sinh viên:</label> <input type="text" id="id"
-							name="id" placeholder="Nhập mã" required> <label
+						<label for="maSV">Mã sinh viên:</label> <input type="text" id="maSV"
+							name="maSV" placeholder="Nhập mã" required> <label
 							for="name">Tên thành viên:</label> <input type="text" id="name"
 							name="name" placeholder="Nhập tên" required>
 					</div>
 				</div>
 				<button type="button" onclick="addMemberInput()">Thêm Thành
 					Viên</button>
+				<button class="mt-2" type="submit">Thêm Nhóm</button>
 				<br>
-				<button type="submit">Đăng Ký Thành Viên</button>
 
-			</form:form>
+			</form>
 		</div>
+
 	</div>
 	<script>
 		function addMemberInput() {

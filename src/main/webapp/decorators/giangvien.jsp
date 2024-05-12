@@ -18,6 +18,10 @@
 <script src="https://kit.fontawesome.com/a610a0c4b9.js"></script>
 <link href="<c:url value='/template/giangvien/header.css' />"
 	rel="stylesheet" type="text/css" />
+	<link href="<c:url value='/template/giangvien/footer.css' />"
+	rel="stylesheet" type="text/css" />
+	<link href="<c:url value='/template/giangvien/main.css' />"
+	rel="stylesheet" type="text/css" />
 
 </head>
 <body id="page-top">

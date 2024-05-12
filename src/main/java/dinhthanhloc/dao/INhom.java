@@ -12,4 +12,5 @@ public interface INhom extends GenericDAO<NhomEntity>{
 	void delete(long id);
 	List<NhomEntity> findAll(Pageble pageble);
 	int getTotalItem();
+	NhomEntity findOneByTen(String TenNhom);
 }

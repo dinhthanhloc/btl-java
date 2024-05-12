@@ -11,4 +11,5 @@ public interface IGiangVien extends GenericDAO<GiangVienEntity>{
 	void delete(long id);
 	List<GiangVienEntity> findAll();
 	GiangVienEntity findOneByMaTK(Long MaGiangVien);
+	GiangVienEntity findOneByTen(String TenGiangVien);
 }

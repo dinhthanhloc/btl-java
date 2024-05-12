@@ -12,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import org.json.JSONObject;
 
+import dinhthanhloc.dao.imp.NhomDAO;
 import dinhthanhloc.dao.imp.SinhVienDao;
 import dinhthanhloc.dao.imp.TaiKhoanDAO;
 import dinhthanhloc.model.NhomEntity;
@@ -40,22 +41,23 @@ public class HomeController {
 
 	}
 
-	@RequestMapping(value = "/save-nhom", method = RequestMethod.POST)
-	public String saveNhom(@RequestParam("TenNhom") String TenNhom, HttpServletRequest request) {
-		String[] maSVs = request.getParameterValues("MaSinhVien");
-		String[] tenSV= request.getParameterValues("TenSinhVien");
+	@RequestMapping(value = "/save-nhom", method = RequestMethod.GET)
+	public String saveNhom(HttpServletRequest request) {
+		String[] maSVs = request.getParameterValues("maSV");
+		String tenNhom = (String)request.getParameter("tenNhom");
 		if(maSVs!= null) {
+			StringBuilder thanhvien = new StringBuilder("");
 			for(String maSV : maSVs) {
 				SinhVienEntity sv = SinhVienDao.getInstance().findOne(Long.parseLong(maSV));
+				
 				if(sv != null) {
-					JSONObject jsonThanhVien = new JSONObject(sv.toString());
-					StringBuilder thanhvien = new StringBuilder("");
-					thanhvien.append(jsonThanhVien);
+					thanhvien.append(sv.toString());
 				}else {
 					return "redirect:/them-nhom";
 				}
 			}
-			NhomEntity nhom = new NhomEntiy(TenNhom,thanhvien);
+			NhomEntity newNhom = new NhomEntity(tenNhom, thanhvien.toString());
+			NhomDAO.getInstance().save(newNhom);
 			return "redirect:/trang-chu";
 		}
 		

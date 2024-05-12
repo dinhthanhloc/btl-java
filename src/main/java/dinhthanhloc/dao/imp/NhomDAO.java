@@ -59,4 +59,10 @@ public class NhomDAO extends AbstractDAO<NhomEntity> implements INhom{
 		String sql = "SELECT count(*) FROM nhom";
 		return count(sql);
 	}
+	@Override
+	public NhomEntity findOneByTen(String TenNhom) {
+		String sql = "SELECT * FROM nhom WHERE TenNhom = ?";
+		List<NhomEntity> nhom = query(sql, new NhomMapper(), TenNhom);
+		return nhom.isEmpty() ? null : nhom.get(0);
+	}
 }

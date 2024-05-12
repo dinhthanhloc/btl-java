@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
- <body >
+   
+    <body >
         <header>
             <div class="header-logo">
-               <img src="" alt="">
+               <img src="/web/accset/img/tải xuống (1).jpg" alt="">
             </div>
-            <div onclick="toggleNavigation()" class="menu"><i class="fa fa-navicon" style="font-size:24px"></i></div>
             <nav class="header-menu-nav">
                 <ul>
                     <li><a href="#">Trang chủ</a></li>
@@ -20,7 +20,7 @@
                     <li>
                         <a href="#">Quan lí nhóm</a>
                         <ul class="menu-sublist">
-                            <li><a href="<c:url value='/quan-tri/add' />">Danh sách nhóm</a></li>
+                            <li><a href="">Danh sách nhóm</a></li>
                             <li><a href="">quản lí báo cáo</a></li>
                         </ul>
                     </li>
@@ -47,29 +47,15 @@
                     <div class="account-submenu">
                         <a href="#">Profile</a>
                         <a href="#">Settings</a>
-                        <a href="#">Logout</a>
+                        <a href="<c:url value='/logout' />">Logout</a>
                     </div>
                 </div>
-                <div onclick="toggleNavigation()" class="menu"><i class="fa fa-navicon" style="font-size:24px"></i></div>
              
             
         </header>
         
     <script >
-    function toggleNavigation() {
-    const navigation = document.querySelector('.header-menu-nav');
-    const slide = document.querySelector('#slide');
-    
-    
-    if (navigation.style.display === 'block' || navigation.style.display === '') {
-        navigation.style.display = 'none'; 
-        slide.classList.remove('active');
-    } else {
-        navigation.style.display = 'block'; 
-        slide.classList.add('active'); 
-    }
-}
-
+   
 document.querySelectorAll('.header-menu-nav li').forEach(li => {
   li.addEventListener('click', function() {
     const hasSubMenu = this.querySelector('.menu-sublist');

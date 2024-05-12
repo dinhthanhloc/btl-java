@@ -68,4 +68,18 @@ public class DetaiEntity extends AbstractEntity<DetaiEntity>{
 		KetQua = ketQua;
 	}
 
+	public DetaiEntity(String tenDeTai, String maGiangVien, int maNhom, int maNganh, int maTrangThai) {
+		super();
+		TenDeTai = tenDeTai;
+		MaGiangVien = maGiangVien;
+		MaNhom = maNhom;
+		MaNganh = maNganh;
+		MaTrangThai = maTrangThai;
+	}
+
+	public DetaiEntity() {
+		super();
+	}
+	
+
 }

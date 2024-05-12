@@ -1,46 +1,40 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@include file="/common/taglib.jsp"%>
-<head>
 <body>
-	<div id="slide">
+	<%
+	String message = (String) request.getAttribute("message");
+	if (message == null)
+		message = "";
+	%>
+	<div id="container-dangki">
+		<div>
+			<h1>Đăng kí đề tài sinh viên</h1>
+		</div>
+		<p><%=message%></p>
+		<div class="dangki-detai">
+			<form action="/btl-spring/save-detai" method="GET">
+				<div class="group">
+					<label for="tenDeTai">Tên Đề tài:</label> <input type="text"
+						id="tenDeTai" name="tenDeTai" placeholder="Nhập tên đè tài"
+						required>
+					<hr>
+				</div>
+				<div class="group">
+					<label for="tenGV">Tên Giảng viên:</label> <input type="text"
+						id="tenGV" name="tenGV" placeholder="Nhập tên giảng viên" required>
+					<hr>
+				</div>
+				<div class="group">
+					<label for="tenNhom">Tên Nhóm:</label> <input type="text"
+						id="tenNhom" name="tenNhom" placeholder="Nhập tên nhóm" required>
+					<hr>
+				</div>
 
-		<div id="container-dangki">
-			<div class="title-dangki">
-				<h1>
-					Đăng kí đề tài sinh viên
-					</h1>
-			</div>
-			<div class="dangki-form">
-				<form:form method="POST" action="/btl-spring/save-login" modelAttribute="deai">
-					<div class="form-item">
-						<form:label for="detai" path="TenDeTai">Tên đề tài: </form:label> <form:input type="text"
-							id="detai" path="TenDeTai" required/>
-					</div>
+				<button class="mt-2" type="submit">Thêm</button>
+				<br>
 
-					<div class="form-item">
-						<form:label for="giangvien" path="TenDeTai">Giảng viên hướng dẫn </form:label> <form:input
-							type="text" id="giangvien" path="TenDeTai"
-							placeholder="Nhập tên gv" required/>
-					</div>
-
-					<div class="form-item">
-						<form:label for="giangvien" path="TenDeTai"> Tên Nhóm </form:label> <form:input type="text"
-							path="TenDeTai" id="giangvien" placeholder="Nhập tên nhóm"
-							required/>
-					</div>
-
-					<div class="form-button">
-						<button type="submit">
-							<i class="fa fa-paper-plane-o"></i> Lưu
-						</button>
-						<button type="reset">
-							<i class="fa fa-times"></i> Hủy
-						</button>
-
-					</div>
-				</form:form>
-			</div>
+			</form>
 		</div>
 	</div>
 </body>
